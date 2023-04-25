@@ -37,7 +37,7 @@ const Login = () => {
             </div>
           </div>
 
-          <form className="form" autoComplete="">
+          <form className="form" autoComplete="off">
             <label className="label" htmlFor="email">
               Email Address
             </label>
@@ -65,7 +65,7 @@ const Login = () => {
           </form>
 
           <p className="register">
-            Don’t have an account? <a>Register here</a>
+            Don’t have an account? <span>Register here</span>
           </p>
         </div>
       </div>

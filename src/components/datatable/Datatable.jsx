@@ -42,9 +42,15 @@ const Datatable = () => {
   ];
 
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((response) => setProducts(response.data));
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://fakestoreapi.com/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
   }, []);
 
   console.log(products);

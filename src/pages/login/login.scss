@@ -144,35 +144,10 @@
         color: #858585;
         font-family: "Lato", sans-serif;
 
-        a {
+        span {
           color: #346bd5;
         }
       }
     }
   }
 }
-
-// @media (min-width: 360px) {
-//   .login {
-//     display: flex;
-//     min-width: 100vw;
-//     min-height: 100vh;
-
-//     .board {
-//       visibility: hidden;
-//     }
-
-//     .signIn {
-//       width: 100%;
-
-//       .wrapper {
-//         min-width: 100%;
-//         padding: 40px;
-
-//         .form {
-//           width: 80%;
-//         }
-//       }
-//     }
-//   }
-// }

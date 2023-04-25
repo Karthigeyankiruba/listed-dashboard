@@ -1,0 +1,53 @@
+.chart {
+  //   width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    .left {
+      .date {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #858585;
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 20px;
+
+      .guest {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .color {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #8884d8;
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .color {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #4ed49a77;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

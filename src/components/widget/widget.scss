@@ -1,0 +1,37 @@
+.widget {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 120px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  position: relative;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    .title {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "Lato", sans-serif;
+    }
+
+    .amount {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .right {
+    .icon {
+      font-size: 32px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.login {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  .board {
+    width: 40%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex: 1;
+    font-size: 72px;
+    font-weight: 700;
+  }
+
+  .signIn {
+    width: 60%;
+    background-color: #f5f5f5;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex: 2;
+
+    .wrapper {
+      min-width: 385px;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+      // background-color: red;
+      gap: 20px;
+      padding: 40px;
+      text-align: left;
+
+      .title {
+        .title-signin {
+          font-size: 36px;
+          font-weight: 700px;
+          margin-bottom: 10px;
+        }
+
+        .desc {
+          color: black;
+          font-size: 16px;
+          font-weight: 400;
+          font-family: "Lato", sans-serif;
+        }
+      }
+
+      .socialLinks {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #858585;
+
+        .img {
+          width: 20px;
+          height: 20px;
+        }
+
+        // .name {
+        //   margin-left: 10px;
+        // }
+
+        .google {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          background-color: white;
+          padding: 5px 20px;
+          border-radius: 10px;
+        }
+        .apple {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          background-color: white;
+          padding: 5px 20px;
+          border-radius: 10px;
+        }
+      }
+
+      .form {
+        width: 385px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 30px;
+        background-color: #ffff;
+        border-radius: 20px;
+        font-family: "Lato", sans-serif;
+
+        .label {
+          text-align: left;
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: 400;
+          font-family: "Lato", sans-serif;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px 15px;
+          border: none;
+          outline: none;
+          background-color: #f5f5f5;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          font-size: 18px;
+          font-weight: 400;
+          font-family: "Lato", sans-serif;
+        }
+
+        .forget-password {
+          font-size: 14px;
+          color: #346bd5;
+        }
+
+        .btn {
+          width: 100%;
+          color: white;
+          background-color: black;
+          margin-top: 20px;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 10px;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+        }
+      }
+
+      .register {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        color: #858585;
+        font-family: "Lato", sans-serif;
+
+        a {
+          color: #346bd5;
+        }
+      }
+    }
+  }
+}
+
+// @media (min-width: 360px) {
+//   .login {
+//     display: flex;
+//     min-width: 100vw;
+//     min-height: 100vh;
+
+//     .board {
+//       visibility: hidden;
+//     }
+
+//     .signIn {
+//       width: 100%;
+
+//       .wrapper {
+//         min-width: 100%;
+//         padding: 40px;
+
+//         .form {
+//           width: 80%;
+//         }
+//       }
+//     }
+//   }
+// }

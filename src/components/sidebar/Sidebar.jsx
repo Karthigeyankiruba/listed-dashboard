@@ -10,13 +10,19 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          to={"/dashboard"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <span className="logo">Board.</span>
         </Link>
       </div>
       <div className="center">
         <ul>
-          <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+          <Link
+            to={"/dashboard"}
+            style={{ textDecoration: "none", color: "white" }}
+          >
             <li>
               <PieChartOutlineIcon className="icon" />
               <span>Dashboard</span>

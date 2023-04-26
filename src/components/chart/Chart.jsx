@@ -67,6 +67,7 @@ const Chart = () => {
       </div>
       <div className="bottom">
         <AreaChart
+          className="areachart"
           width={1000}
           height={250}
           data={data}

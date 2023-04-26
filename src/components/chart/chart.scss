@@ -49,5 +49,15 @@
   .bottom {
     margin-top: 20px;
     width: 100%;
+
+    @media screen and (min-width: 300px) {
+      width: 100%;
+    }
+
+    .areachart {
+      @media screen and (min-width: 300px) {
+        width: max-content;
+      }
+    }
   }
 }

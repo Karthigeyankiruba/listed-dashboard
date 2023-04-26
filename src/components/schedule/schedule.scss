@@ -35,9 +35,17 @@
       display: flex;
       gap: 10px;
       font-family: "Lato", sans-serif;
+      @media (max-width: 360px) {
+        display: flex;
+        flex-direction: column;
+      }
+
       .line {
         height: 40px;
         width: 5px;
+        @media (max-width: 360px) {
+          display: none;
+        }
       }
 
       p {

@@ -7,6 +7,10 @@
   border-radius: 30px;
   position: relative;
 
+  @media (max-width: 480px) {
+    display: none;
+  }
+
   .top {
     margin-bottom: 40px;
     .logo {

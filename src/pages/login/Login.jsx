@@ -1,13 +1,35 @@
 import React from "react";
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import { schema } from "../../schemas";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("dashboard");
+  const onSubmit = async (values, actions) => {
+    // console.log(values);
+    // console.log(actions);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+    navigate("/dashboard");
   };
+  const {
+    values,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    errors,
+    touched,
+    isSubmitting,
+  } = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: schema,
+    onSubmit,
+  });
 
   return (
     <div className="login">
@@ -37,16 +59,25 @@ const Login = () => {
             </div>
           </div>
 
-          <form className="form" autoComplete="off">
+          <form className="form" autoComplete="off" onSubmit={handleSubmit}>
             <label className="label" htmlFor="email">
               Email Address
             </label>
             <input
               id="email"
-              className="input"
+              // className="input"
               type="email"
               placeholder="Enter email address"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.email && touched.email ? "input-error" : "input"
+              }
             />
+            {errors.email && touched.email && (
+              <p className="error">{errors.email}</p>
+            )}
             <label className="label" htmlFor="password">
               Password
             </label>
@@ -55,11 +86,16 @@ const Login = () => {
               id="password"
               className="password"
               placeholder="Enter Password"
-              min={6}
-              max={10}
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.password && touched.password && (
+              <p className="error">{errors.password}</p>
+            )}
+
             <p className="forget-password">Forget Password?</p>
-            <button onClick={handleClick} className="btn">
+            <button disabled={isSubmitting} type="submit" className="btn">
               SignIn
             </button>
           </form>
